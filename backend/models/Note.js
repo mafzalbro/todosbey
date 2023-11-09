@@ -2,6 +2,10 @@ const {Schema, default: mongoose} = require('mongoose')
 
 
 const NotesSchema = new Schema ({
+    user: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'user'
+    },
     title: {
         type: String,
         required: true
